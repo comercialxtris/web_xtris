@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XTRIS - Reparación y Mantenimiento de Robots de Piscina</title>
+    <meta name="description" content="XTRIS - Servicio técnico especializado en reparación y mantenimiento de robots limpiafondos de piscina. Todas las marcas.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --verde-claro: #e8f5e9;
+            --verde-medio: #a5d6a7;
+            --verde-oscuro: #2e7d32;
+            --verde-radioactivo: #76ff03;
+            --texto: #1b5e20;
+            --blanco: #ffffff;
+            --gris-suave: #f1f8e9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
+        /* HEADER / NAV */
+        header {
+            background: var(--blanco);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--verde-oscuro);
+            text-decoration: none;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--verde-radioactivo);
+            text-shadow: 0 0 8px rgba(118, 255, 3, 0.5);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--texto);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--verde-radioactivo);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--verde-oscuro);
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--verde-claro) 0%, var(--gris-suave) 100%);
+            padding: 5rem 2rem;
+            text-align: center;
+            border-bottom: 3px solid var(--verde-radioactivo);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--verde-oscuro);
+        }
+
+        .hero h1 span {
+            color: var(--verde-radioactivo);
+            text-shadow: 0 0 10px rgba(118, 255, 3, 0.4);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #4a7c59;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--verde-oscuro);
+            color: var(--blanco);
+            padding: 0.9rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            background: #1b5e20;
+            box-shadow: 0 0 15px rgba(118, 255, 3, 0.5);
+        }
+
+        /* SERVICIOS */
+        .servicios {
+            padding: 4rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .servicios h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            color: var(--verde-oscuro);
+        }
+
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .servicio-card {
+            background: var(--verde-claro);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(46, 125, 50, 0.15);
+            border-color: var(--verde-radioactivo);
+        }
+
+        .servicio-card .icono {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .servicio-card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--verde-oscuro);
+        }
+
+        .servicio-card p {
+            color: #4a7c59;
+            font-size: 0.95rem;
+        }
+
+        /* SOBRE NOSOTROS */
+        .sobre {
+            background: var(--gris-suave);
+            padding: 4rem 2rem;
+        }
+
+        .sobre-contenido {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .sobre h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--verde-oscuro);
+        }
+
+        .sobre p {
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+            color: #4a7c59;
+        }
+
+        /* MARCAS */
+        .marcas {
+            padding: 3rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .marcas h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--verde-oscuro);
+        }
+
+        .marcas-lista {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .marca-tag {
+            background: var(--verde-claro);
+            border: 1px solid var(--verde-medio);
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--verde-oscuro);
+        }
+
+        /* TESTIMONIOS */
+        .testimonios {
+            padding: 4rem 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .testimonios h2 {
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            color: var(--verde-oscuro);
+        }
+
+        .testimonios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonio-card {
+            background: var(--verde-claro);
+            border-radius: 12px;
+            padding: 2rem;
+            border-left: 4px solid var(--verde-radioactivo);
+            text-align: left;
+        }
+
+        .testimonio-texto {
+            font-style: italic;
+            color: #4a7c59;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .testimonio-autor {
+            font-weight: 600;
+            color: var(--verde-oscuro);
+            font-size: 0.9rem;
+        }
+
+        /* CONTACTO */
+        .contacto {
+            background: var(--verde-oscuro);
+            color: var(--blanco);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .contacto h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contacto-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .contacto-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contacto-item .icono {
+            font-size: 1.3rem;
+            color: var(--verde-radioactivo);
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1b5e20;
+            color: var(--verde-medio);
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--verde-radioactivo);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--blanco);
+                padding: 1rem 2rem;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .contacto-info {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">XTRI<span>S</span></a>
+            <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
+            <ul class="nav-links">
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#sobre">Sobre nosotros</a></li>
+                <li><a href="#marcas">Marcas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="privacidad.html">Privacidad</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Especialistas en <span>robots de piscina</span></h1>
+        <p>Servicio técnico especializado en reparación y mantenimiento de robots limpiafondos. Nos ajustamos a tus necesidades. ¿Necesitas un presupuesto personalizado? Contáctanos y estudiaremos encantados tu caso.</p>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="servicios" id="servicios">
+        <h2>Nuestros servicios</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <div class="icono">🔧</div>
+                <h3>Reparación</h3>
+                <p>Diagnosticamos y reparamos todo tipo de averías en robots limpiafondos: motores, placas, sensores, rodillos y más.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="icono">🛠️</div>
+                <h3>Mantenimiento preventivo</h3>
+                <p>Revisiones periódicas para alargar la vida útil de tu robot y evitar averías costosas.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="icono">🔄</div>
+                <h3>Recogida y entrega</h3>
+                <p>Recogemos tu robot, lo reparamos en nuestro taller y te lo devolvemos listo para funcionar.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="icono">💡</div>
+                <h3>Asesoramiento</h3>
+                <p>Te ayudamos a elegir el robot más adecuado para tu piscina según tamaño, forma y necesidades.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="icono">⚡</div>
+                <h3>Reparación urgente</h3>
+                <p>Servicio express para que tu robot vuelva a funcionar lo antes posible en temporada alta.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="sobre" id="sobre">
+        <div class="sobre-contenido">
+            <h2>Sobre XTRIS</h2>
+            <p>Somos un servicio técnico especializado exclusivamente en robots limpiafondos de piscina. Nos ajustamos a tus necesidades y estudiamos cada caso de forma personalizada.</p>
+            <p>Trabajamos con todas las marcas del mercado y disponemos de las herramientas y recambios necesarios para devolver tu robot a su estado óptimo. ¿Necesitas un presupuesto? Contáctanos sin compromiso.</p>
+        </div>
+    </section>
+
+    <!-- MARCAS -->
+    <section class="marcas" id="marcas">
+        <h2>Marcas que reparamos</h2>
+        <div class="marcas-lista">
+            <span class="marca-tag">Zodiac</span>
+            <span class="marca-tag">Astralpool</span>
+            <span class="marca-tag">Fluidra</span>
+            <span class="marca-tag">Polaris</span>
+            <span class="marca-tag">Aquabot</span>
+            <span class="marca-tag">Otras marcas</span>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tu robot de piscina no funciona? Escríbenos o llámanos sin compromiso.</p>
+        <div class="contacto-info">
+            <div class="contacto-item">
+                <span class="icono">📞</span>
+                <span>931 199 140</span>
+            </div>
+            <div class="contacto-item">
+                <span class="icono">✉️</span>
+                <span>comercial.xtris@gmail.com</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 XTRIS - Reparación de robots de piscina | <a href="privacidad.html">Política de privacidad</a></p>
+    </footer>
+
+</body>
+</html>
