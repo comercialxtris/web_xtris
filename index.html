@@ -47,16 +47,14 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--verde-oscuro);
             text-decoration: none;
-            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
         }
 
-        .logo span {
-            color: var(--verde-radioactivo);
-            text-shadow: 0 0 8px rgba(118, 255, 3, 0.5);
+        .logo img {
+            height: 50px;
+            width: auto;
         }
 
         .nav-links {
@@ -366,7 +364,7 @@
     <!-- HEADER -->
     <header>
         <nav>
-            <a href="index.html" class="logo">XTRI<span>S</span></a>
+            <a href="index.html" class="logo"><img src="logo.png" alt="XTRIS - Customer Service"></a>
             <button class="menu-toggle" aria-label="Abrir menú" onclick="document.querySelector('.nav-links').classList.toggle('active')">☰</button>
             <ul class="nav-links">
                 <li><a href="#servicios">Servicios</a></li>
