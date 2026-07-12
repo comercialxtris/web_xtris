@@ -46,16 +46,14 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--verde-oscuro);
             text-decoration: none;
-            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
         }
 
-        .logo span {
-            color: var(--verde-radioactivo);
-            text-shadow: 0 0 8px rgba(118, 255, 3, 0.5);
+        .logo img {
+            height: 50px;
+            width: auto;
         }
 
         .nav-links {
@@ -89,12 +87,6 @@
             padding-bottom: 0.5rem;
         }
 
-        .contenido .fecha {
-            color: #4a7c59;
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-        }
-
         .contenido h2 {
             font-size: 1.3rem;
             color: var(--verde-oscuro);
@@ -110,11 +102,48 @@
         .contenido ul {
             padding-left: 1.5rem;
             margin-bottom: 1rem;
+            list-style-type: disc;
         }
 
         .contenido a {
             color: var(--verde-oscuro);
             text-decoration: underline;
+        }
+
+        .contenido table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .contenido table th,
+        .contenido table td {
+            border: 1px solid var(--verde-medio);
+            padding: 0.7rem 1rem;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .contenido table th {
+            background: var(--verde-claro);
+            color: var(--verde-oscuro);
+            font-weight: 600;
+        }
+
+        .contenido table td {
+            color: #333;
+        }
+
+        .datos-responsable {
+            background: var(--verde-claro);
+            border-radius: 8px;
+            padding: 1.2rem 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .datos-responsable p {
+            margin-bottom: 0.3rem;
         }
 
         footer {
@@ -139,6 +168,15 @@
             .contenido h1 {
                 font-size: 1.5rem;
             }
+
+            .contenido table {
+                font-size: 0.8rem;
+            }
+
+            .contenido table th,
+            .contenido table td {
+                padding: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -146,7 +184,7 @@
 
     <header>
         <nav>
-            <a href="index.html" class="logo">XTRI<span>S</span></a>
+            <a href="index.html" class="logo"><img src="logo.png" alt="XTRIS - Customer Service"></a>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="privacidad.html">Privacidad</a></li>
@@ -155,71 +193,184 @@
     </header>
 
     <main class="contenido">
-        <h1>Política de Privacidad</h1>
-        <p class="fecha">Última actualización: mayo 2025</p>
+        <h1>POLÍTICA DE PRIVACIDAD</h1>
 
-        <h2>1. Responsable del tratamiento</h2>
-        <p>El responsable del tratamiento de los datos personales es:</p>
+        <h2>1. ¿QUIÉN ES EL RESPONSABLE DEL TRATAMIENTO DE SUS DATOS?</h2>
+        <div class="datos-responsable">
+            <p>XTRIS TECHNICAL SERVICES, S.L.</p>
+            <p>B27577188</p>
+            <p>Calle Palautordera, 6, Pol. Ind. Can Prat - Sanata</p>
+            <p>08450-Llinars del Vallés, Barcelona</p>
+            <p>comercial.xtris@gmail.com</p>
+            <p>93.119.91.40</p>
+        </div>
+
+        <h2>2. ¿CON QUÉ FINALIDAD TRATAMOS SUS DATOS PERSONALES?</h2>
+        <p>Dependiendo de cómo interactúe con XTRIS TECHNICAL SERVICES, S.L. trataremos sus datos personales para las siguientes finalidades.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>FINALIDAD</th>
+                    <th>+info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. NEGOCIAL</td>
+                    <td>Trataremos la información que nos facilite con la finalidad de gestionar la relación negocial en todos sus ámbitos, así como el envío de comunicaciones comerciales por vía electrónica.</td>
+                </tr>
+                <tr>
+                    <td>2. CONTACTOS</td>
+                    <td>
+                        <p>Finalidad 1: Mantener nuestra agenda de contactos:</p>
+                        <p>a) Como persona de contacto para mantener relaciones con la entidad jurídica u organización en la que usted presta sus servicios.</p>
+                        <p>b) Como interesado que se ha puesto en contacto con nosotros consultándonos o solicitándonos alguna información, para poder atenderle.</p>
+                        <p>c) Como persona de contacto para mantener relaciones directamente.</p>
+                        <p>Finalidad 2: El envío de comunicaciones comerciales, incluido por correo electrónico y otros medios de comunicación electrónica equivalentes, sobre nuestros productos y servicios, así como información sobre eventos y acontecimientos, en el caso de que se le hubiera solicitado su autorización y nos la hubiera concedido.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3. CANDIDATOS</td>
+                    <td>Trataremos los datos de carácter personal que nos comunique, así como su currículum vitae, con el fin de realizar la selección de candidatos a puestos de trabajo, actuales y futuros, ofertados por nuestra compañía.</td>
+                </tr>
+                <tr>
+                    <td>4. VIDEOVIGILANCIA</td>
+                    <td>Tratamos sus datos con la finalidad de videovigilancia para garantizar la seguridad de nuestros empleados, bienes e instalaciones en general, clientes y visitas, así como para las funciones de control de las obligaciones y deberes laborales.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>3. ¿CUÁL ES LA LEGITIMACIÓN PARA EL TRATAMIENTO DE SUS DATOS?</h2>
+        <p>La base legal que nos permite tratar sus datos personales también depende de la finalidad para la que los tratemos, según lo explicado en la siguiente tabla:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>FINALIDAD</th>
+                    <th>Legitimación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. NEGOCIAL.</td>
+                    <td>La base legal para el tratamiento de sus datos es la ejecución de contrato de prestación de servicios en el que usted es parte.</td>
+                </tr>
+                <tr>
+                    <td>2. CONTACTOS</td>
+                    <td>
+                        <p>La base legal para el tratamiento de sus datos en la finalidad 1 de mantenimiento de agenda de contactos es:</p>
+                        <p>a) En caso de tratarse de una persona de contacto para mantener relaciones con la entidad jurídica u organización en la que usted presta sus servicios, es la satisfacción del interés legítimo del Responsable, de acuerdo con lo establecido en el art. 6.1.f del RGPD.</p>
+                        <p>b) En caso de interesado puesto en contacto con nosotros, la base legal es la obtención de su consentimiento.</p>
+                        <p>c) En caso de persona de contacto para mantener relaciones directamente, se conservarán en tanto se mantenga la relación y salvo los plazos legales de conservación.</p>
+                        <p>En la finalidad 2 de envío de comunicaciones comerciales, la base legal para el tratamiento de sus datos es la obtención de su consentimiento.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3. CANDIDATOS</td>
+                    <td>La base legal para el tratamiento de sus datos es la obtención de su consentimiento expreso al tratamiento.</td>
+                </tr>
+                <tr>
+                    <td>4. VIDEOVIGILANCIA</td>
+                    <td>La base legal para el tratamiento de sus datos es la obtención de su consentimiento, en cuanto ha accedido a nuestras instalaciones después de haber visto el cartel informativo acerca la realización de tratamiento de videovigilancia.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>4. ¿DURANTE CUÁNTO TIEMPO CONSERVAREMOS SUS DATOS?</h2>
+        <p>El plazo de conservación de sus datos dependerá de las finalidades para las que los tratemos, según lo explicado a continuación:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>FINALIDAD</th>
+                    <th>Plazo de conservación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. NEGOCIAL</td>
+                    <td>Los datos personales proporcionados se conservarán mientras se mantenga nuestra relación negocial y hasta cinco años desde la última compraventa o finalización de servicio.</td>
+                </tr>
+                <tr>
+                    <td>2. CONTACTOS</td>
+                    <td>
+                        <p>Los datos personales proporcionados se conservarán en la finalidad 1:</p>
+                        <p>a) En caso de tratarse de una persona de contacto para mantener relaciones con la entidad jurídica u organización en la que usted presta sus servicios, se conservarán mientras se mantenga nuestra relación con dicha entidad jurídica u organización, y salvo los plazos legales por las responsabilidades que pudieran derivarse de la relación con la entidad.</p>
+                        <p>b) En caso de interesado puesto en contacto con nosotros, hasta 6 meses después de atender su requerimiento, por si se produjeran por su parte comunicaciones posteriores en referencia a dicha consulta o requerimiento de información.</p>
+                        <p>c) En caso de persona de contacto para mantener relaciones directamente, se conservarán mientras se mantenga la relación, salvo los plazos legales de conservación.</p>
+                        <p>En la finalidad 2 de envío de comunicaciones comerciales, conservaremos sus datos en tanto no nos manifieste su oposición a continuar recibiendo nuestras comunicaciones.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3. CANDIDATOS</td>
+                    <td>Los datos personales proporcionados se conservarán durante seis meses.</td>
+                </tr>
+                <tr>
+                    <td>4. VIDEOVIGILANCIA</td>
+                    <td>Los datos se suprimirán a los 30 días, salvo comunicación a Fuerzas y Cuerpos de Seguridad y/o Juzgados y Tribunales.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>5. ¿A QUÉ DESTINATARIOS SE COMUNICARÁN SUS DATOS?</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>FINALIDAD</th>
+                    <th>Plazo de conservación</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. NEGOCIAL</td>
+                    <td>No se comunicarán datos a terceros, salvo obligación legal.</td>
+                </tr>
+                <tr>
+                    <td>2. CONTACTOS</td>
+                    <td>No se comunicarán datos a terceros, salvo obligación legal.</td>
+                </tr>
+                <tr>
+                    <td>3. CANDIDATOS</td>
+                    <td>No se comunicarán datos a terceros, salvo obligación legal.</td>
+                </tr>
+                <tr>
+                    <td>4. VIDEOVIGILANCIA</td>
+                    <td>No se comunicarán datos a terceros, salvo obligación legal.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p>En XTRIS TECHNICAL SERVICES, S.L. contaremos con la colaboración de terceros prestadores de servicios que en cada caso hayamos podido contratar y que, para la prestación de dicho servicio, puede ser necesario que tengan acceso a sus datos de carácter personal, pero que los tratarán con todas las garantías legales exigibles, siguiendo nuestras instrucciones y previa suscripción de un contrato de protección de datos en el que exigimos, entre otros, tratar los datos exclusivamente para las finalidades pactadas, aplicar medidas técnicas y organizativas adecuadas, así como suprimir y devolver los datos a la finalización del servicio.</p>
+        <p>En XTRIS TECHNICAL SERVICES, S.L. seguimos unos criterios estrictos de selección de terceros prestadores de servicios con el fin de dar cumplimiento a nuestras obligaciones en materia de protección de datos.</p>
+
+        <h2>6. DECISIONES AUTOMATIZADAS, PERFILES Y LÓGICA APLICADA</h2>
+        <p>La empresa NO tomará decisiones automatizadas.</p>
+
+        <h2>7. ¿CUÁLES SON SUS DERECHOS CUANDO NOS FACILITA SUS DATOS?</h2>
+        <p>Cualquier persona tiene derecho a obtener confirmación sobre si en XTRIS TECHNICAL SERVICES, S.L. estamos tratando datos personales que le conciernan o no.</p>
+        <p>Asimismo, tiene:</p>
         <ul>
-            <li><strong>Nombre comercial:</strong> XTRIS</li>
-            <li><strong>Actividad:</strong> Reparación y mantenimiento de robots de piscina</li>
-            <li><strong>Email de contacto:</strong> info@xtris.es</li>
-            <li><strong>Sitio web:</strong> www.xtris.es</li>
+            <li>Derecho a solicitar el acceso a sus datos personales.</li>
+            <li>Derecho a solicitar su rectificación</li>
+            <li>Derecho a solicitar su supresión.</li>
+            <li>Derecho a solicitar la limitación de su tratamiento.</li>
+            <li>Derecho a oponerse al tratamiento.</li>
+            <li>Derecho a la portabilidad de los datos.</li>
+            <li>Derecho a retirar el consentimiento prestado.</li>
+            <li>Derecho de información</li>
+            <li>Derecho a oponerse a ser objeto de decisiones individuales automatizadas</li>
         </ul>
-
-        <h2>2. Datos que recopilamos</h2>
-        <p>Podemos recopilar los siguientes datos personales cuando nos contactas:</p>
-        <ul>
-            <li>Nombre y apellidos</li>
-            <li>Número de teléfono</li>
-            <li>Dirección de correo electrónico</li>
-            <li>Dirección postal (para recogida/entrega de equipos)</li>
-            <li>Datos del equipo a reparar (marca, modelo, número de serie)</li>
-        </ul>
-
-        <h2>3. Finalidad del tratamiento</h2>
-        <p>Los datos personales que nos facilites serán tratados con las siguientes finalidades:</p>
-        <ul>
-            <li>Gestionar las solicitudes de reparación y mantenimiento.</li>
-            <li>Contactar contigo para informarte del estado de tu reparación.</li>
-            <li>Emitir presupuestos y facturas.</li>
-            <li>Cumplir con las obligaciones legales aplicables.</li>
-        </ul>
-
-        <h2>4. Base legal</h2>
-        <p>El tratamiento de tus datos se basa en:</p>
-        <ul>
-            <li>La ejecución de un contrato o la aplicación de medidas precontractuales (presupuesto, reparación).</li>
-            <li>El cumplimiento de obligaciones legales (facturación, normativa fiscal).</li>
-            <li>Tu consentimiento, cuando nos contactas voluntariamente.</li>
-        </ul>
-
-        <h2>5. Conservación de los datos</h2>
-        <p>Conservaremos tus datos personales durante el tiempo necesario para cumplir con la finalidad para la que fueron recogidos y para cumplir con las obligaciones legales. Los datos de facturación se conservarán durante el plazo legalmente establecido (mínimo 4 años).</p>
-
-        <h2>6. Destinatarios</h2>
-        <p>No cedemos tus datos personales a terceros, salvo obligación legal. No realizamos transferencias internacionales de datos.</p>
-
-        <h2>7. Tus derechos</h2>
-        <p>Puedes ejercer los siguientes derechos en cualquier momento escribiendo a <strong>info@xtris.es</strong>:</p>
-        <ul>
-            <li><strong>Acceso:</strong> conocer qué datos tenemos sobre ti.</li>
-            <li><strong>Rectificación:</strong> corregir datos inexactos.</li>
-            <li><strong>Supresión:</strong> solicitar la eliminación de tus datos.</li>
-            <li><strong>Oposición:</strong> oponerte al tratamiento de tus datos.</li>
-            <li><strong>Limitación:</strong> solicitar la limitación del tratamiento.</li>
-            <li><strong>Portabilidad:</strong> recibir tus datos en formato estructurado.</li>
-        </ul>
-        <p>También tienes derecho a presentar una reclamación ante la <strong>Agencia Española de Protección de Datos (AEPD)</strong>: <a href="https://www.aepd.es">www.aepd.es</a></p>
-
-        <h2>8. Seguridad</h2>
-        <p>Adoptamos las medidas técnicas y organizativas necesarias para proteger tus datos personales contra el acceso no autorizado, la pérdida o la destrucción.</p>
-
-        <h2>9. Cookies</h2>
-        <p>Este sitio web no utiliza cookies ni tecnologías de seguimiento.</p>
-
-        <h2>10. Modificaciones</h2>
-        <p>Nos reservamos el derecho a modificar esta política de privacidad. Cualquier cambio será publicado en esta página con la fecha de actualización.</p>
+        <p>Para ejercer sus derechos, dirija un escrito adjuntando copia de su DNI a:</p>
+        <div class="datos-responsable">
+            <p>XTRIS TECHNICAL SERVICES, SL</p>
+            <p>Ejercicio derechos protección de datos</p>
+            <p>Calle Palautordera, 6, Pol. Ind. Can Prat - Sanata</p>
+            <p>08450-Llinars del Vallés, Barcelona</p>
+        </div>
+        <p>, o bien remita un correo electrónico a: comercial.xtris@gmail.com</p>
+        <p>Asimismo, le informamos que puede dirigirse a la Agencia Española de Protección de Datos (<a href="https://www.aepd.es">www.agpd.es</a>) para obtener información adicional o para presentar una reclamación, por ejemplo, si no ha obtenido satisfacción en el ejercicio de sus derechos.</p>
     </main>
 
     <footer>
